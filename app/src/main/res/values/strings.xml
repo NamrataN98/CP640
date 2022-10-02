@@ -8,4 +8,14 @@
     <string name="switchstring">What does this do ?</string>
     <string name="RadioButtonstring">RadioButton</string>
     <string name="CheckboxString">Checkbox</string>
+    <string name="dialog_message">Do you want to finish ?</string>
+    <string name="title_message">Dialog Box</string>
+    <string name="dialog_ok">Ok</string>
+    <string name="dialog_no">No</string>
+    <string name="invalid">Invalid Email/Password</string>
+    <string name="switch_on">Switch is On</string>
+    <string name="switch_of">Switch is Off</string>
+    <string name="result">Here is my response</string>
+    <string name="camera_yes">camera permission granted</string>
+    <string name="camera_no">camera permission denied</string>
 </resources>

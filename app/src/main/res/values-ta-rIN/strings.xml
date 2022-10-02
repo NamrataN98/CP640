@@ -9,4 +9,14 @@
     <string name="switchstring">இது என்ன செய்கிறது</string>
     <string name="RadioButtonstring">ரேடியோ பட்டன்</string>
     <string name="CheckboxString">தேர்வு பெட்டி</string>
+    <string name="dialog_message">முடிக்க வேண்டுமா?</string>
+    <string name="title_message">உரையாடல் பெட்டி</string>
+    <string name="dialog_ok">ஆம்</string>
+    <string name="dialog_no">இல்லை</string>
+    <string name="invalid">தவறான மின்னஞ்சல்/கடவுச்சொல்</string>
+    <string name="switch_on">Switch is On"</string>
+    <string name="switch_of">Switch is Off</string>
+    <string name="result">Here is my response</string>
+    <string name="camera_yes">camera permission granted</string>
+    <string name="camera_no">camera permission denied</string>
 </resources>
