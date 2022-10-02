@@ -3,6 +3,7 @@
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\'m a Button!</string>
     <string name="login">Login</string>
+    <string name="password_hint">Enter aplha (1 cap , 1 Small) numeric  spl char(A$7)</string>
     <string name="password">Password</string>
     <string name="hint">Login Name</string>
     <string name="switchstring">What does this do ?</string>
