@@ -18,4 +18,10 @@
         android:layout_height="wrap_content"
         android:text="@string/ButtonText" />
 
+    <Button
+        android:id="@+id/buttonChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_chat" />
+
 </LinearLayout>

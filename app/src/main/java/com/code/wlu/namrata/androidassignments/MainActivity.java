@@ -1,9 +1,5 @@
 package com.code.wlu.namrata.androidassignments;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -16,7 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    protected static final String ACTIVITY_NAME = "MainActivity";
+    public static final String ACTIVITY_NAME = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
         Button btnHelloWorld = (Button) findViewById(R.id.button);
+        Button btnStartChat = (Button) findViewById(R.id.buttonChat);
+
+
         btnHelloWorld.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,6 +31,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,10);
             }
         });
+
+        btnStartChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+
+                Intent intent = new Intent(MainActivity.this, ChatWindow.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 

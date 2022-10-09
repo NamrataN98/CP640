@@ -19,4 +19,6 @@
     <string name="result">Here is my response</string>
     <string name="camera_yes">camera permission granted</string>
     <string name="camera_no">camera permission denied</string>
+    <string name="start_chat">Start Chat</string>
+    <string name="send">Send</string>
 </resources>

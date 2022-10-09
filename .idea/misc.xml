@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/namnp/Desktop/CP670/app/src/main/res/layout/activity_chat_window.xml" value="0.176" />
         <entry key="..\:/Users/namnp/Desktop/CP670/app/src/main/res/layout/activity_list_items.xml" value="0.2" />
         <entry key="..\:/Users/namnp/Desktop/CP670/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/namnp/Desktop/CP670/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/namnp/Desktop/CP670/app/src/main/res/layout/chat_row_incoming.xml" value="0.23076923076923078" />
+        <entry key="..\:/Users/namnp/Desktop/CP670/app/src/main/res/layout/chat_row_outgoing.xml" value="0.1" />
       </map>
     </option>
   </component>

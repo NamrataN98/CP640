@@ -15,10 +15,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidAssignments"
         tools:targetApi="31">
+
+        <meta-data
+            android:name= "android.support.PARENT_ACTIVITY"
+        android:value= "MainActivity" />
+
+        <activity
+            android:name=".ChatWindow"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+        </activity>
         <activity
             android:name=".ListItemsActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -30,8 +40,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
