@@ -22,4 +22,15 @@
     <string name="password_hint">aplha எண் கடவுச்சொல்லை உள்ளிடவும் (A$7)</string>
     <string name="start_chat">அரட்டை தொடங்கவும்</string>
     <string name="send">அனுப்பு</string>
+    <string name="title_activity_test_toolbar">சோதனைக் கருவிப்பட்டி</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="toolbar_dialog">திரும்பிப் போக வேண்டுமா</string>
+    <string name="version">பதிப்பு 1.0 நம்ரதா பிரபு</string>
 </resources>

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnHelloWorld = (Button) findViewById(R.id.button);
         Button btnStartChat = (Button) findViewById(R.id.buttonChat);
-
+        Button tbButton = (Button) findViewById(R.id.ToolStart);
 
         btnHelloWorld.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +43,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        tbButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+                Intent intent = new Intent(new Intent(MainActivity.this, TestToolbar.class));
+                startActivityForResult(intent, 10);
+            }
+        });
 
     }
 
