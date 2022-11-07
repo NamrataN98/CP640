@@ -2,7 +2,10 @@ package com.code.wlu.namrata.androidassignments;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,6 +23,12 @@ public class ChatWindow extends AppCompatActivity {
 
     String typedMessage;
     ArrayList<String> messages = new ArrayList<>();
+    ChatDatabaseHelper myDb = new ChatDatabaseHelper(this);
+    private SQLiteDatabase database;
+
+    private String[] columns = {myDb.KEY_ID, myDb.KEY_MESSAGE};
+    private static String ACTIVITY_NAME = "ChatWindow";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -32,13 +41,22 @@ public class ChatWindow extends AppCompatActivity {
 
         ChatAdapter messageAdapter = new ChatAdapter( this );
         viewBox.setAdapter(messageAdapter);
+        database = myDb.getWritableDatabase();
+        messages = getAllItem();
+
 
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 typedMessage = editTextBox.getText().toString();
+
+                ContentValues values = new ContentValues();
+                values.put(ChatDatabaseHelper.KEY_MESSAGE, typedMessage);
+                updateMessages(typedMessage);
+
                 messages.add(typedMessage);
                 messageAdapter.notifyDataSetChanged();
+                editTextBox.setText("");
             }
         });
     }
@@ -77,5 +95,43 @@ public class ChatWindow extends AppCompatActivity {
         }
 
     }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        myDb.close();
+        database.close();
+    }
+
+    public void updateMessages(String messages) {
+        ContentValues values = new ContentValues();
+        values.put(ChatDatabaseHelper.KEY_MESSAGE, messages);
+        database.insert(ChatDatabaseHelper.TABLE_NAME, null, values);
+
+    }
+
+    public ArrayList<String> getAllItem() {
+        ArrayList<String> items = new ArrayList<>();
+        Cursor cursor = database.query(ChatDatabaseHelper.TABLE_NAME, columns,
+                null, null, null, null, null);
+        int size = cursor.getCount();
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            String messages = cursor.getString(cursor.getColumnIndexOrThrow(ChatDatabaseHelper.KEY_MESSAGE));
+            Log.i(ACTIVITY_NAME, "SQL MESSAGE " + cursor.getString(cursor.getColumnIndexOrThrow(ChatDatabaseHelper.KEY_MESSAGE)));
+            Log.i(ACTIVITY_NAME, "Cursor's column count= " + (cursor.getColumnCount()));
+            items.add(messages);
+            cursor.moveToNext();
+        }
+        for(int idx=0;idx<cursor.getColumnCount();idx++)
+        {
+            Log.i(ACTIVITY_NAME, "Cursor's column Names= " + (cursor.getColumnName(idx)));
+        }
+        cursor.close();
+        return items;
+
+    }
+
+
 }
 
