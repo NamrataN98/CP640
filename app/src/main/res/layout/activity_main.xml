@@ -30,5 +30,18 @@
         android:text= "Test Toolbar"
         android:id="@+id/ToolStart" />
 
+    <Spinner
+        android:id="@+id/citySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        />
+
+    <Button
+        android:id="@+id/weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weather Forecast" />
+
 
 </LinearLayout>

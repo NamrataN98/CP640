@@ -32,4 +32,27 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="toolbar_dialog">Do you want to go back ?</string>
     <string name="version">Version 1.0 by Namrata Prabhu"</string>
+
+    <string-array name="cities">
+        <item>Toronto</item>
+        <item>Edmonton</item>
+        <item>Calgary</item>
+        <item>Winnipeg</item>
+        <item>Vancouver</item>
+        <item>Ottawa</item>
+        <item>Montreal</item>
+        <item>Waterloo</item>
+        <item>London</item>
+        <item>Windsor</item>
+        <item>Hamilton</item>
+        <item>Mississauga</item>
+        <item>Thunder Bay</item>
+        <item>Victoria</item>
+        <item>Halifax</item>
+        <item>Saskatoon</item>
+        <item>Kingston</item>
+        <item>Oshawa</item>
+        <item>Regina</item>
+        <item>Sydney</item>
+    </string-array>
 </resources>
