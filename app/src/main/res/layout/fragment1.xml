@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/messageHere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="MessageHere"
+        android:textColorHint="#757575"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="right"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/idHere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID="
+        android:textColorHint="#757575"
+        app:layout_constraintTop_toBottomOf="@id/messageHere"
+        android:gravity="right"
+        ></TextView>
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="283dp"
+        android:layout_height="56dp"
+        android:text="DELETE THIS MESSAGE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,5 +43,9 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(DROP_TABLE);
         onCreate(db);
     }
+
+    public static void deleteMessage(SQLiteDatabase db, long id){
+        db.delete(TABLE_NAME, KEY_ID + "=" + id, null);
+    }
 }
 
